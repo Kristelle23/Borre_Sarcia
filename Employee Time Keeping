@@ -1,0 +1,72 @@
+using System;
+class HelloWorld
+{
+    static void Main()
+    {
+        int timeIn1, timeOut1, timeIn2, timeOut2, mins1, mins2, mins3, mins4;
+        double totalHours = 0;
+        double regularHours = 0;
+
+
+        Console.WriteLine("************* EMPLOYEE TIME KEEPING ************* \n");
+
+        Console.WriteLine("TIME IN: AM");
+        Console.Write("Hour: ");
+        timeIn1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Minute: ");
+        mins1 = Convert.ToInt32(Console.ReadLine());
+
+
+        Console.WriteLine();
+        Console.WriteLine("TIME OUT: NN");
+        Console.Write("Hour: ");
+        timeOut1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Minute: ");
+        mins2 = Convert.ToInt32(Console.ReadLine());
+
+        int workedHrs = timeOut1 - timeIn1;
+
+        Console.WriteLine();
+        Console.WriteLine("********** LUNCH BREAK ********** \n");
+        Console.WriteLine("================================= \n");
+
+
+        Console.WriteLine();
+        Console.WriteLine("TIME IN: PM");
+        Console.Write("Hour: ");
+        timeIn2 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Minute: ");
+        mins3 = Convert.ToInt32(Console.ReadLine());
+
+
+        Console.WriteLine();
+        Console.WriteLine("TIME OUT: PM");
+        Console.Write("Hour: ");
+        timeOut2 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Minute: ");
+        mins4 = Convert.ToInt32(Console.ReadLine());
+
+
+        int workedHrs1 = timeOut2 - timeIn2;
+        int Worked_Hours = workedHrs + workedHrs1;
+
+        if (Worked_Hours <= 8)
+        {
+            regularHours += Worked_Hours;
+        }
+        else
+        {
+            regularHours += 8;
+            totalHours += Worked_Hours - 8;
+        }
+
+        totalHours += Worked_Hours;
+
+        Console.WriteLine();
+        Console.WriteLine("Total hours worked: " + totalHours);
+        Console.WriteLine("Regular hours worked: " + regularHours);
+
+
+
+    }
+}
