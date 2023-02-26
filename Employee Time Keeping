@@ -1,5 +1,5 @@
 using System;
-class HelloWorld
+class FINALS
 {
     static void Main()
     {
@@ -7,8 +7,9 @@ class HelloWorld
         double totalHours = 0;
         double regularHours = 0;
 
-
-        Console.WriteLine("************* EMPLOYEE TIME KEEPING ************* \n");
+        Console.WriteLine();
+        Console.WriteLine("************* EMPLOYEE TIME KEEPING *************");
+        Console.WriteLine("================================================= \n");
 
         Console.WriteLine("TIME IN: AM");
         Console.Write("Hour: ");
